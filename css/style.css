@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+}
+.header {
+    background-color:  #21C088;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header__img{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.login {
+    background: linear-gradient(#21C088, #AB88FF);
+    display: flex;
+    align-items: center;/*Alinear horizontalmente*/
+    justify-content: center;/*Alinear verticalmente*/
+    flex-direction: column;/*parea ver uno debajo del otro*/
+    padding: 0px 30px;/*para que no se vea el espacio blanco arriba ni abajo*/
+    min-height: calc(100vh - 200px); /*parecido al height pero relativo, calcula la vista y pone 200px fijos en alto */
+    }
+.login__container {
+    display: flex;
+    justify-content: space-around;/*Espacio repartido ente todos los elementos*/
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    padding: 60px 68px 40px;/*arriba 60px, derecha e izquierda 68, abajo 40px*/
+    min-height: 700px;/*para que sea estatico el alto del contenedor*/
+    width: 300px; /*para que sea estatico el ancho del contenedor*/
+}
+.login__container--form{
+    display:flex;
+    flex-direction: column;
+}
+.login__container--form label{
+    font-size: 14px;
+}
+.login__container--remember-me {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.login__container--remember-me a{
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+.login__container--remember-me a:hover{
+    text-decoration: underline;
+}
+.login__container--social-media > div { /*que todos lo elementos div de social media sean afectados, significa: > div */
+display: flex;
+align-items: center;
+font-size: 14px;
+margin-bottom: 10px;
+}
+.login__container--social-media > div > img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;   
+}
+.login__container--register{
+    font-size: 14px;
+}
+.login__container--register a {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+}
+.login__container--register a:hover{
+    text-decoration: underline;
+}
+.input { /*Estilizando todos los input, text*/
+    background-color: transparent;
+    border-left: 0px;
+    border-top: 0px;
+    border-right:0 px;
+    border-bottom: 2px solid white;
+    font-size: 16px;
+    font-family: 'Muli', sans-serif;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px;
+}
+::placeholder { /*subclase, aplica a todos los que se vean afectados por placeholder*/
+    color: white;
+}
+.button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    height: 50px;
+    letter-spacing: 1px;
+    margin: 10px 0px;
+}
+.footer {
+    background-color:#AB88FF;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+.footer a {
+    color:white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+@media only screen and (max-width: 600px){ /*Se hace para que se ajuste a pantallas de celulares o tablets*/
+    .login__container{  /*Aqui van todas las clases que necesitan ajustarse a esas medidas o los efectos que toman en esos dispósitivos*/
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+    .footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
