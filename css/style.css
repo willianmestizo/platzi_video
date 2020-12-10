@@ -1,116 +1,176 @@
 body{
     margin: 0;
     font-family: 'Muli', sans-serif;
+    background-color:  #8F57FD;
 }
 .header {
-    background-color:  #21C088;
+    background-color:  #8F57FD;
     width: 100%;
     height: 80px;
     display: flex;
     justify-content: space-between;
+    top: 0px;
+    width: 100%;
     align-items: center;
+    color: white;
+
 }
 .header__img{
     width: 200px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 30px;
+    width: 200px;
 }
-.login {
-    background: linear-gradient(#21C088, #AB88FF);
+.header__menu{
+    margin-right: 30px;
+}
+.header__menu ul{
+  display: none;
+  list-style: none;
+  position: absolute;
+  padding: 0px;
+  width: 100px;
+  text-align: right;
+  margin: 0px 0px 0px -14px;
+}
+.header__menu:hover ul, ul:hover{
+  display: block;
+}
+.header__menu li{
+  margin:10px 0px;
+
+}
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+
+}
+.header__menu li a:hover{
+  text-decoration: underline;
+}
+.header__menu--profile{
+    margin-right: 8px;
+    /*width: 40px;*/
     display: flex;
-    align-items: center;/*Alinear horizontalmente*/
-    justify-content: center;/*Alinear verticalmente*/
-    flex-direction: column;/*parea ver uno debajo del otro*/
-    padding: 0px 30px;/*para que no se vea el espacio blanco arriba ni abajo*/
-    min-height: calc(100vh - 200px); /*parecido al height pero relativo, calcula la vista y pone 200px fijos en alto */
-    }
-.login__container {
-    display: flex;
-    justify-content: space-around;/*Espacio repartido ente todos los elementos*/
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid white;
-    border-radius: 40px;
-    color: white;
-    padding: 60px 68px 40px;/*arriba 60px, derecha e izquierda 68, abajo 40px*/
-    min-height: 700px;/*para que sea estatico el alto del contenedor*/
-    width: 300px; /*para que sea estatico el ancho del contenedor*/
-}
-.login__container--form{
-    display:flex;
-    flex-direction: column;
-}
-.login__container--form label{
-    font-size: 14px;
-}
-.login__container--remember-me {
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-.login__container--remember-me a{
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-}
-.login__container--remember-me a:hover{
-    text-decoration: underline;
-}
-.login__container--social-media > div { /*que todos lo elementos div de social media sean afectados, significa: > div */
-display: flex;
-align-items: center;
-font-size: 14px;
-margin-bottom: 10px;
-}
-.login__container--social-media > div > img{
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;   
-}
-.login__container--register{
-    font-size: 14px;
-}
-.login__container--register a {
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    text-decoration: none;
-}
-.login__container--register a:hover{
-    text-decoration: underline;
-}
-.input { /*Estilizando todos los input, text*/
-    background-color: transparent;
-    border-left: 0px;
-    border-top: 0px;
-    border-right:0 px;
-    border-bottom: 2px solid white;
-    font-size: 16px;
-    font-family: 'Muli', sans-serif;
-    margin-bottom: 20px;
-    padding: 0px 20px;
-    outline: none;
-    height: 50px;
-}
-::placeholder { /*subclase, aplica a todos los que se vean afectados por placeholder*/
-    color: white;
-}
-.button {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    border-radius: 25px;
-    color: white;
+    align-items: center;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Muli', sans-serif;
-    height: 50px;
-    letter-spacing: 1px;
-    margin: 10px 0px;
+    
 }
+.header__menu--profile img{
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+.header__menu--profile p {
+    margin: 0px;
+    color: white;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 0px 0px 40px 40px;
+}
+.main__title {
+    color:white;
+    font-size: 25px;
+}
+.categories__title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+}
+
+.carousel {
+    width: 100%;
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+    overflow-x: hidden;/*para esconder la barra de desplazamiento que hace el contenedor por defecto*/
+}
+.carousel__container{
+    font-size: 0;
+    white-space: nowrap;
+    margin: 70px 0px;
+    padding-bottom: 10px;
+}
+.carousel-item{
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all;
+    transform-origin: center left;
+    position: relative;
+
+    
+}
+.carousel-item:hover ~ .carousel-item{
+    transform: translate3d(100px, 0, 0);
+}
+.carousel__container:hover .carousel-item{
+    opacity: 0.3;
+}
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.5);
+    opacity: 1;
+}
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover; /* -o-object-fit: cover; object-fit: cover;  es la otra forma */
+}
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100% );
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column;
+    color:white;
+    /* align-items: flex-start; flex-direction: column;*/
+}
+.carousel-item__details:hover{
+   opacity:1;
+   transition: 450ms opacity;
+}
+.carousel-item__details img{
+    height: 20px;
+    width: 20px;
+    opacity: 1;
+}
+.carousel-item__details p{
+   margin: 2px 0px;
+}
+.carousel-item__details--title{
+  font-size: 12px;
+  color: white;
+  margin: 5 px 0px 0px 0px;
+}
+.carousel-item__details--subtitle{
+    color: white;
+    font-size: 8px;
+    margin: 3px 0px;
+}
+
+
 .footer {
-    background-color:#AB88FF;
+    background-color:#8f57fd;
     display: flex;
     align-items: center;
     height: 100px;
@@ -127,15 +187,29 @@ margin-bottom: 10px;
 .footer a:hover {
     text-decoration: underline;
 }
-@media only screen and (max-width: 600px){ /*Se hace para que se ajuste a pantallas de celulares o tablets*/
-    .login__container{  /*Aqui van todas las clases que necesitan ajustarse a esas medidas o los efectos que toman en esos dispósitivos*/
-        background-color: transparent;
-        border: none;
-        padding: 0px;
-        width: 100%;
+.input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    margin-bottom: 20px;/*Este falto en comparacion con la profesora*/
+    padding: 0px 20px;
+    width: 70%;
+    outline: none;
+}
+::placeholder {
+    color: white;
+}
+@media only screen and (max-width: 600px) {
+    .main__description--title {
+    font-size: 30px;
     }
+
     .footer {
-        align-items: flex-start;
-        flex-direction: column;
+    align-items: flex-start;
+    flex-direction: column;
     }
 }
