@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<style>
+    body{
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    background-color:  #8F57FD;
+}
+.header {
+    background-color:  #8F57FD;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+    align-items: center;
+    color: white;
+
+}
+.header__img{
+    width: 200px;
+    margin-top: 10px;
+    margin-left: 30px;
+    width: 200px;
+}
+.header__menu{
+    margin-right: 30px;
+}
+.header__menu ul{
+  display: none;
+  list-style: none;
+  position: absolute;
+  padding: 0px;
+  width: 100px;
+  text-align: right;
+  margin: 0px 0px 0px -14px;
+}
+.header__menu:hover ul, ul:hover{
+  display: block;
+}
+.header__menu li{
+  margin:10px 0px;
+
+}
+.header__menu li a {
+  color: white;
+  text-decoration: none;
+
+}
+.header__menu li a:hover{
+  text-decoration: underline;
+}
+.header__menu--profile{
+    margin-right: 8px;
+    /*width: 40px;*/
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+.header__menu--profile img{
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+.header__menu--profile p {
+    margin: 0px;
+    color: white;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    margin-bottom: 0px;
+   
+}
+.text {
+    color:white;
+    font-size: 35px;
+    
+    text-align: center;
+}
+.animated{
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+}
+@keyframes pulse {
+    0% {transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+.pulse{
+    animation-name: pulse;
+    animation-duration: 1s;
+}
+
+.main__mensaje--submensaje{
+    color: white;
+    font-size: 20px;
+    
+}
+.footer {
+    margin-top: 100px;
+    background-color:#8f57fd;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+.footer a {
+    
+    color:white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<body>
+    <header class="header">
+      <a href="https://imgur.com/Ey0JJkG"><img class="header__img" id="logo_platzi" src="https://i.imgur.com/Ey0JJkG.png" title="source: imgur.com" /></a>
+      <div class="header__menu">
+          <div class="header__menu--profile">
+              <img src="./149071.png" alt="User">
+              <p>Perfil</p>
+          </div>
+          <ul>
+              <li><a href="/">Cuenta</a></li>
+              <li><a href="/">Cerrar Sesi&oacute;n</a></li>
+          </ul>
+      </div>
+    </header>
+    <section class="main">
+        <h1 class="text animated pulse">¡¡¡¡¡Opssss page not found!!!!!</h1>
+        <h3 class="main__mensaje--submensaje">No se hayaron coincidencias</h3>
+    </section>
+
+    <footer class="footer">
+        <a href="/">Términos de uso</a>
+        <a href="/">Declaración de privacidad</a>
+        <a href="/">Centro de ayuda</a>
+    </footer>
+</body>
+</html>
