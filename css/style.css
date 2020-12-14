@@ -91,11 +91,12 @@ body{
     padding: 30px;
     position: relative;
     overflow-x: hidden;/*para esconder la barra de desplazamiento que hace el contenedor por defecto*/
+   
 }
 .carousel__container{
     font-size: 0;
     white-space: nowrap;
-    margin: 70px 0px;
+    margin: 65px 0px;
     padding-bottom: 10px;
 }
 .carousel-item{
@@ -203,6 +204,20 @@ body{
 ::placeholder {
     color: white;
 }
+/*
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(190,189, 189, 0.219)
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.281);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255, 0.699);
+}*/
 @media only screen and (max-width: 600px) {
     .main__description--title {
     font-size: 30px;
